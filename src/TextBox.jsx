@@ -1,20 +1,21 @@
 import React,{ useState } from 'react'
 
-const TextBox = () => {
+const TextBox = (props) => {
 
-    const [text, setText] = useState("")
 
-    const handleTextChange = (event) => {
-        setText(event.target.value)
+    const handleInputChange = (event) => {
+        props.textChange(event.target.value)
     }
+
+    // text textChange
  
 
   return (
     <div>
         <input
             type='text'
-            onChange={handleTextChange}
-            value= {text}
+            onChange={handleInputChange}
+            value= {props.text}
             id="textbox"
 
         />

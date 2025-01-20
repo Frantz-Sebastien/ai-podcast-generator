@@ -5,12 +5,17 @@ import './App.css'
 import TextBox from './TextBox'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [text, setText] = useState("")
+
+  const handleTextChange = (script) => {
+    setText(script)
+  }
+
 
   return (
     <>
-     <TextBox />
-    
+     <TextBox text={text} textChange={handleTextChange} />
+      <p>Current Text: {text}</p>
     </>
   )
 }
