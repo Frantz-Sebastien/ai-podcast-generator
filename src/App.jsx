@@ -11,11 +11,17 @@ function App() {
     setText(script)
   }
 
+  const handleSubmit = () => {
+
+  }
+  
+
 
   return (
     <>
      <TextBox text={text} textChange={handleTextChange} />
       <p>Current Text: {text}</p>
+      <button onClick={handleSubmit}>Submit</button>
     </>
   )
 }
