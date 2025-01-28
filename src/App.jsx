@@ -57,9 +57,22 @@ function App() {
       </button>   
 
       {podcastScript && (
-        <div>
+        <div className='podcast-container'>
           <h2>Generated Podcast Script:</h2>
-          <p>{podcastScript}</p>
+          {podcastScript.split("\n").map((line, index) => {
+            const [speaker, ...content] = line.split(":");
+            return (
+              <p
+                key={index}
+                className={
+                  speaker.trim().toLowerCase() === "host 1"
+                  ? "host-one"
+                  : "host-two"
+                }>
+                  <strong>{speaker.trim()}:</strong>{content.join(":").trim()}
+              </p>
+            )
+          })}
         </div>
       )} 
       
