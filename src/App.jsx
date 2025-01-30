@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import TranscriptInput from './TranscriptInput'
+import AudioInput from './AudioInput'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <TranscriptInput />
+      <AudioInput />
       </>
   )
 }
